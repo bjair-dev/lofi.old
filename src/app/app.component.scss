@@ -1,0 +1,147 @@
+/* Estilos para el reproductor de MP3 */
+.mp3-player {
+  width: 300px; /* Ajusta el ancho según tus necesidades */
+  height: 100px; /* Ajusta la altura según tus necesidades */
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* Barras de sonido */
+.mp3-player .sound-bars {
+  width: 100%;
+  height: 10px; /* Ajusta la altura de las barras según tus necesidades */
+  background-color: #ccc;
+  display: flex;
+  align-items: flex-end;
+}
+
+.mp3-player .sound-bars .bar {
+  width: 4px; /* Ajusta el ancho de las barras según tus necesidades */
+  margin: 0 1px; /* Espacio entre las barras */
+  background-color: #333;
+  animation: soundAnimation 0.3s infinite alternate;
+}
+
+@keyframes soundAnimation {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+.bg-fondo {
+  background: url(../assets/img/s3.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.letra {
+  font-size: 70px;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Cosmic";
+  color: white;
+}
+.letrasb {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Cosmic" Arial, Helvetica, sans-serif;
+  color: white;
+  position: relative;
+  display: inline-block;
+  animation: glitch 2s infinite;
+}
+.letrac {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Cosmic" Arial, Helvetica, sans-serif;
+  color: white;
+  cursor: pointer;
+}
+@keyframes glitch {
+  0% {
+    transform: none;
+  }
+  20% {
+    transform: skewX(-10deg) scaleY(1.1);
+    color: #ff3f78;
+    text-shadow: 0 0 4px #ff3f78;
+  }
+  40% {
+    transform: skewX(10deg) scaleY(1.1);
+    color: #ff931e;
+    text-shadow: 0 0 4px #ff931e;
+  }
+  60% {
+    transform: skewX(-10deg) scaleY(1.1);
+    color: #e8e244;
+    text-shadow: 0 0 4px #e8e244;
+  }
+  80% {
+    transform: skewX(10deg) scaleY(1.1);
+    color: #32d44e;
+    text-shadow: 0 0 4px #32d44e;
+  }
+  90% {
+    transform: none;
+    opacity: 1;
+  }
+  92% {
+    transform: skewX(-2deg) scaleY(1.1);
+    opacity: 0.8;
+  }
+  94% {
+    transform: skewX(2deg) scaleY(1.1);
+    opacity: 0.8;
+  }
+  96% {
+    transform: skewX(-2deg) scaleY(1.1);
+    opacity: 0.8;
+  }
+  98% {
+    transform: skewX(2deg) scaleY(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #90a4ae;
+  animation: dotAnimation 1s infinite;
+}
+
+@keyframes dotAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,1 +1,127 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box !important;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+@font-face {
+  font-family: "Cosmic";
+  src: url("./assets/font/VT323-Regular.ttf") format("truetype");
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.option {
+  flex: 0 0 calc(33.33% - 20px);
+  max-width: calc(33.33% - 20px);
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.option-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.option-inner.selected::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 2px solid #90a4ae;
+  box-shadow: 0 0 10px rgba(144, 164, 174, 0.8);
+  animation: borderGlow 1s infinite alternate;
+}
+
+.option-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.option-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  animation: textGlow 1s infinite alternate;
+  animation-delay: 0.3s;
+  text-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
+  line-height: 1;
+}
+
+.close-button {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  color: #90a4ae;
+  cursor: pointer;
+}
+
+@keyframes borderGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(144, 164, 174, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(144, 164, 174, 0.8);
+  }
+}
+
+@keyframes textGlow {
+  0% {
+    text-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(0, 0, 255, 0.9);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
+  }
+}
