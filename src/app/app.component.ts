@@ -80,8 +80,8 @@ export class AppComponent {
       this.btnComienza = false;
     }
   }
-
-  llamaFuncion() {
+  @HostListener('document:keydown', ['$event'])
+  llamaFuncion(event?: KeyboardEvent | any) {
     this.btnComienza = true;
 
     this.controls = Array.from(
@@ -339,4 +339,6 @@ export class AppComponent {
         7
     );
   }
+
+  volumen() {}
 }
