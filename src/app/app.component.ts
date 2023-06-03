@@ -203,25 +203,25 @@ export class AppComponent {
   options = [
     {
       id: 1,
-      img: '../assets/img/station_thumb_jfKfPfyJRdk.gif',
+      img: 'https://bjair-dev.github.io/lofi.old/dist/assets/img/station_thumb_jfKfPfyJRdk.gif',
       idytb: 'jfKfPfyJRdk',
       name: 'lofi hip hop radio - beats to relax/study to',
     },
     {
       id: 2,
-      img: '../assets/img/station_thumb_e3L1PIY1pN8.gif',
+      img: 'https://bjair-dev.github.io/lofi.old/dist/assets/img/station_thumb_e3L1PIY1pN8.gif',
       idytb: 'lP26UCnoH9s',
       name: 'coffee shop radio // 24/7 lofi hip-hop beats',
     },
     {
       id: 3,
-      img: '../assets/img/station_thumb_MVPTGNGiI-4.gif',
+      img: 'https://bjair-dev.github.io/lofi.old/dist/assets/img/station_thumb_MVPTGNGiI-4.gif',
       idytb: 'MVPTGNGiI-4',
       name: 'synthwave radio 🌌 - beats to chill/game to',
     },
     {
       id: 4,
-      img: '../assets/img/station_thumb_rUxyKA_-grg.gif',
+      img: 'https://bjair-dev.github.io/lofi.old/dist/assets/img/station_thumb_rUxyKA_-grg.gif',
       idytb: 'rUxyKA_-grg',
       name: 'lofi hip hop radio - beats to sleep/chill to',
     },
